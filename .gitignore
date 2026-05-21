@@ -1,0 +1,3 @@
+.streamlit/
+upload_docs.py
+__pycache__/
