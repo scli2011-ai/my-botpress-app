@@ -48,7 +48,7 @@ if "bp_conversation_id" not in st.session_state:
 
 # --- 4. SIDEBAR ---
 with st.sidebar:
-    st.title("Einstein Junior App")
+    st.title("Einstein Senior App")
     if st.session_state.user:
         st.success(f"Logged in as: {st.session_state.user.email}")
         
@@ -135,7 +135,7 @@ if not st.session_state.user:
 
 # --- UI: Chat Interface (Botpress) ---
 else:
-    st.subheader("👨‍🏫 I am Einstein Junior, your science teacher!")
+    st.subheader("👨‍🏫 I am Einstein Senior, your science teacher!")
     
     # Ensure Botpress is initialized if user refreshed the page
     if not st.session_state.bp_user_key or not st.session_state.bp_conversation_id:
@@ -178,7 +178,7 @@ else:
                     bot_replied = False
                     latest_bot_reply = ""
                     
-                    with st.spinner("Einstein Junior is thinking..."):
+                    with st.spinner("Einstein Senior is thinking..."):
                         for _ in range(15):
                             time.sleep(1)
                             history_res = requests.get(get_url, headers=headers)
